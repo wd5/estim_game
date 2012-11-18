@@ -1,0 +1,10 @@
+{% csrf_token %}
+{% for error in form_errors  %}
+    {{ error }}
+{% endfor %}
+<table>
+    <tr><td colspan="2"><h1>Population Estimation Game</h1></td></tr>
+    {{ cityform }}
+    <tr><td colspan="2"><input class="btn btn-success" type="submit" value="Оценить" id="estimate" name="estimate"/>
+        <input type="submit" class="btn btn-danger" value="Обнулить" name="clear" id="clear"/></td></tr>
+</table>
